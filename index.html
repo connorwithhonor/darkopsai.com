@@ -1,1 +1,667 @@
-{"id":"/index.html","path":"/index.html","sha":"b82fa83729e03882447b8872f231930289545f9d","mime_type":"text/html","size":21991,"site_id":"741b0739-cd63-42a3-83f2-afdfd7374688","deploy_id":"69bcccd76b3770946707b796"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkOps AI | Connor MacIvor — AI Growth Architect</title>
+<meta name="description" content="Connor MacIvor — Former LAPD officer turned AI Growth Architect. 27+ years Santa Clarita real estate. AI voice agents, business automation, and sellers-only representation.">
+<meta property="og:title" content="DarkOps AI | Connor MacIvor">
+<meta property="og:description" content="Former cop. AI builder. 27+ years SCV real estate. One link to everything.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://darkopsai.com">
+<meta property="og:image" content="https://darkopsai.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://darkopsai.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#0a0a0f;
+    --bg2:#0d0d14;
+    --cyan:#00f0ff;
+    --gold:#ffd700;
+    --red:#ff2a2a;
+    --green:#00ff88;
+    --text:#e0e0e0;
+    --dim:#5a5a6a;
+    --glow-cyan:0 0 20px rgba(0,240,255,.3),0 0 60px rgba(0,240,255,.1);
+    --glow-gold:0 0 20px rgba(255,215,0,.3),0 0 60px rgba(255,215,0,.1);
+    --glow-red:0 0 20px rgba(255,42,42,.3),0 0 60px rgba(255,42,42,.1);
+  }
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Rajdhani',sans-serif;
+    min-height:100dvh;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* GRID BACKGROUND */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      linear-gradient(rgba(0,240,255,.03) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,240,255,.03) 1px,transparent 1px);
+    background-size:40px 40px;
+    pointer-events:none;
+    z-index:0;
+  }
+  body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:radial-gradient(ellipse at 50% 0%,rgba(0,240,255,.06) 0%,transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* SCANLINE */
+  .scanline{
+    position:fixed;
+    top:0;left:0;right:0;
+    height:3px;
+    background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+    opacity:.15;
+    animation:scanDown 8s linear infinite;
+    z-index:1;
+    pointer-events:none;
+  }
+  @keyframes scanDown{
+    0%{top:-3px}
+    100%{top:100vh}
+  }
+
+  /* 17 DOTS EASTER EGG */
+  .dots-17{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    pointer-events:none;
+    z-index:0;
+    overflow:hidden;
+  }
+  .dots-17 span{
+    position:absolute;
+    width:3px;height:3px;
+    background:var(--gold);
+    border-radius:50%;
+    opacity:.12;
+    animation:dotPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes dotPulse{
+    0%,100%{opacity:.08;transform:scale(1)}
+    50%{opacity:.2;transform:scale(1.5)}
+  }
+
+  /* MAIN CONTAINER */
+  .hub{
+    position:relative;
+    z-index:2;
+    max-width:420px;
+    margin:0 auto;
+    padding:28px 20px 40px;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* TOP BADGE */
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:5px 14px;
+    border:1px solid rgba(0,240,255,.2);
+    border-radius:20px;
+    font-size:.7rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--cyan);
+    margin-bottom:18px;
+    animation:fadeIn .8s ease both;
+    background:rgba(0,240,255,.03);
+  }
+  .badge::before{
+    content:'';
+    width:6px;height:6px;
+    background:var(--cyan);
+    border-radius:50%;
+    animation:blink 2s ease-in-out infinite;
+  }
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+  /* AVATAR */
+  .avatar-ring{
+    width:110px;height:110px;
+    border-radius:50%;
+    padding:3px;
+    background:conic-gradient(var(--cyan),var(--gold),var(--red),var(--cyan));
+    margin-bottom:14px;
+    animation:fadeIn 1s ease both,ringRotate 6s linear infinite;
+    position:relative;
+  }
+  @keyframes ringRotate{
+    0%{background:conic-gradient(from 0deg,var(--cyan),var(--gold),var(--red),var(--cyan))}
+    100%{background:conic-gradient(from 360deg,var(--cyan),var(--gold),var(--red),var(--cyan))}
+  }
+  .avatar-ring img{
+    width:100%;height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    border:3px solid var(--bg);
+  }
+  .avatar-placeholder{
+    width:100%;height:100%;
+    border-radius:50%;
+    background:var(--bg2);
+    border:3px solid var(--bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Orbitron',sans-serif;
+    font-weight:900;
+    font-size:2rem;
+    color:var(--cyan);
+  }
+
+  /* NAME & TITLE */
+  .name{
+    font-family:'Orbitron',sans-serif;
+    font-weight:900;
+    font-size:1.6rem;
+    color:#fff;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    animation:fadeIn 1.1s ease both;
+    text-align:center;
+  }
+  .title{
+    font-size:.85rem;
+    color:var(--dim);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-top:4px;
+    margin-bottom:6px;
+    animation:fadeIn 1.2s ease both;
+    text-align:center;
+  }
+  .tagline{
+    font-size:.95rem;
+    color:var(--gold);
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:22px;
+    animation:fadeIn 1.3s ease both;
+    text-align:center;
+  }
+
+  /* PHONE */
+  .phone-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--text);
+    text-decoration:none;
+    font-size:.9rem;
+    font-weight:500;
+    letter-spacing:1.5px;
+    margin-bottom:22px;
+    transition:color .3s;
+    animation:fadeIn 1.35s ease both;
+  }
+  .phone-link:hover{color:var(--cyan)}
+  .phone-link svg{width:16px;height:16px;fill:var(--cyan)}
+
+  /* CTA BUTTONS */
+  .cta-stack{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    width:100%;
+    margin-bottom:28px;
+  }
+  .cta-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:16px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    font-family:'Rajdhani',sans-serif;
+    font-weight:700;
+    font-size:1.05rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:all .3s cubic-bezier(.22,1,.36,1);
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+  }
+  .cta-btn::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity .3s;
+  }
+  .cta-btn:hover{transform:translateY(-2px)}
+  .cta-btn:hover::before{opacity:1}
+  .cta-btn:active{transform:translateY(0) scale(.98)}
+
+  .cta-icon{
+    width:36px;height:36px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    position:relative;
+    z-index:1;
+  }
+  .cta-icon svg{width:18px;height:18px}
+  .cta-label{
+    position:relative;z-index:1;
+    display:flex;flex-direction:column;
+  }
+  .cta-label small{
+    font-size:.65rem;
+    font-weight:400;
+    letter-spacing:1.5px;
+    opacity:.7;
+    margin-top:1px;
+  }
+
+  /* BUTTON VARIANTS */
+  .cta-voice{
+    background:rgba(0,240,255,.06);
+    border:1px solid rgba(0,240,255,.2);
+    color:var(--cyan);
+  }
+  .cta-voice:hover{border-color:var(--cyan);box-shadow:var(--glow-cyan)}
+  .cta-voice::before{background:linear-gradient(135deg,rgba(0,240,255,.08),transparent)}
+  .cta-voice .cta-icon{background:rgba(0,240,255,.1)}
+  .cta-voice .cta-icon svg{fill:var(--cyan)}
+
+  .cta-auto{
+    background:rgba(255,215,0,.05);
+    border:1px solid rgba(255,215,0,.18);
+    color:var(--gold);
+  }
+  .cta-auto:hover{border-color:var(--gold);box-shadow:var(--glow-gold)}
+  .cta-auto::before{background:linear-gradient(135deg,rgba(255,215,0,.06),transparent)}
+  .cta-auto .cta-icon{background:rgba(255,215,0,.1)}
+  .cta-auto .cta-icon svg{fill:var(--gold)}
+
+  .cta-sell{
+    background:rgba(0,255,136,.05);
+    border:1px solid rgba(0,255,136,.18);
+    color:var(--green);
+  }
+  .cta-sell:hover{border-color:var(--green);box-shadow:0 0 20px rgba(0,255,136,.3)}
+  .cta-sell::before{background:linear-gradient(135deg,rgba(0,255,136,.06),transparent)}
+  .cta-sell .cta-icon{background:rgba(0,255,136,.1)}
+  .cta-sell .cta-icon svg{fill:var(--green)}
+
+  .cta-prop{
+    background:rgba(168,85,247,.05);
+    border:1px solid rgba(168,85,247,.18);
+    color:#a855f7;
+  }
+  .cta-prop:hover{border-color:#a855f7;box-shadow:0 0 20px rgba(168,85,247,.3),0 0 60px rgba(168,85,247,.1)}
+  .cta-prop::before{background:linear-gradient(135deg,rgba(168,85,247,.06),transparent)}
+  .cta-prop .cta-icon{background:rgba(168,85,247,.1)}
+  .cta-prop .cta-icon svg{fill:#a855f7}
+
+  .cta-show{
+    background:rgba(255,42,42,.05);
+    border:1px solid rgba(255,42,42,.18);
+    color:var(--red);
+  }
+  .cta-show:hover{border-color:var(--red);box-shadow:var(--glow-red)}
+  .cta-show::before{background:linear-gradient(135deg,rgba(255,42,42,.06),transparent)}
+  .cta-show .cta-icon{background:rgba(255,42,42,.1)}
+  .cta-show .cta-icon svg{fill:var(--red)}
+
+  .cta-cut{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.12);
+    color:#ccc;
+  }
+  .cta-cut:hover{border-color:rgba(255,255,255,.4);box-shadow:0 0 20px rgba(255,255,255,.1)}
+  .cta-cut::before{background:linear-gradient(135deg,rgba(255,255,255,.04),transparent)}
+  .cta-cut .cta-icon{background:rgba(255,255,255,.06)}
+  .cta-cut .cta-icon svg{fill:#ccc}
+
+  .cta-17k{
+    background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(255,42,42,.05));
+    border:1px solid rgba(255,215,0,.25);
+    color:var(--gold);
+    position:relative;
+  }
+  .cta-17k:hover{border-color:var(--gold);box-shadow:var(--glow-gold)}
+  .cta-17k::before{background:linear-gradient(135deg,rgba(255,215,0,.08),transparent)}
+  .cta-17k .cta-icon{background:rgba(255,215,0,.12)}
+  .cta-17k .cta-icon svg{fill:var(--gold)}
+  .cta-17k .pulse-dot{
+    position:absolute;
+    top:12px;right:14px;
+    width:8px;height:8px;
+    background:var(--gold);
+    border-radius:50%;
+    animation:blink 1.5s ease-in-out infinite;
+  }
+
+  .cta-sync{
+    background:rgba(56,189,248,.05);
+    border:1px solid rgba(56,189,248,.18);
+    color:#38bdf8;
+  }
+  .cta-sync:hover{border-color:#38bdf8;box-shadow:0 0 20px rgba(56,189,248,.3),0 0 60px rgba(56,189,248,.1)}
+  .cta-sync::before{background:linear-gradient(135deg,rgba(56,189,248,.06),transparent)}
+  .cta-sync .cta-icon{background:rgba(56,189,248,.1)}
+  .cta-sync .cta-icon svg{fill:#38bdf8}
+
+  .cta-full{
+    background:rgba(251,146,60,.05);
+    border:1px solid rgba(251,146,60,.18);
+    color:#fb923c;
+  }
+  .cta-full:hover{border-color:#fb923c;box-shadow:0 0 20px rgba(251,146,60,.3),0 0 60px rgba(251,146,60,.1)}
+  .cta-full::before{background:linear-gradient(135deg,rgba(251,146,60,.06),transparent)}
+  .cta-full .cta-icon{background:rgba(251,146,60,.1)}
+  .cta-full .cta-icon svg{fill:#fb923c}
+
+  /* CREDENTIAL BAR */
+  .cred-bar{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+    animation:fadeIn 1.8s ease both;
+  }
+  .cred{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    font-size:.7rem;
+    color:var(--dim);
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+  .cred-dot{
+    width:4px;height:4px;
+    background:var(--cyan);
+    border-radius:50%;
+    opacity:.5;
+  }
+
+  /* FOOTER */
+  .footer{
+    margin-top:auto;
+    padding-top:20px;
+    text-align:center;
+    animation:fadeIn 2s ease both;
+  }
+  .footer a{
+    color:var(--dim);
+    text-decoration:none;
+    font-size:.65rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:color .3s;
+  }
+  .footer a:hover{color:var(--cyan)}
+  .footer .copy{
+    font-size:.6rem;
+    color:rgba(255,255,255,.15);
+    margin-top:8px;
+    letter-spacing:1px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+  .cta-stack .cta-btn:nth-child(1){animation:fadeIn 1.4s ease both}
+  .cta-stack .cta-btn:nth-child(2){animation:fadeIn 1.5s ease both}
+  .cta-stack .cta-btn:nth-child(3){animation:fadeIn 1.6s ease both}
+  .cta-stack .cta-btn:nth-child(4){animation:fadeIn 1.7s ease both}
+  .cta-stack .cta-btn:nth-child(5){animation:fadeIn 1.8s ease both}
+  .cta-stack .cta-btn:nth-child(6){animation:fadeIn 1.9s ease both}
+  .cta-stack .cta-btn:nth-child(7){animation:fadeIn 2.0s ease both}
+  .cta-stack .cta-btn:nth-child(8){animation:fadeIn 2.1s ease both}
+  .cta-stack .cta-btn:nth-child(9){animation:fadeIn 2.2s ease both}
+
+  /* RESPONSIVE */
+  @media(min-width:480px){
+    .hub{padding-top:48px}
+    .name{font-size:1.8rem}
+  }
+  @media(min-width:768px){
+    .hub{max-width:480px;padding-top:60px}
+  }
+
+  /* CLICK RIPPLE */
+  .ripple{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    transform:scale(0);
+    animation:rippleOut .6s ease-out;
+    pointer-events:none;
+  }
+  @keyframes rippleOut{to{transform:scale(4);opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="scanline"></div>
+
+<!-- 17 DOTS EASTER EGG -->
+<div class="dots-17" id="dots17"></div>
+
+<div class="hub">
+
+  <!-- OPERATIONAL STATUS -->
+  <div class="badge">OPERATIONAL</div>
+
+  <!-- AVATAR -->
+  <div class="avatar-ring">
+    <!-- Replace src with Connor's headshot -->
+    <div class="avatar-placeholder">CM</div>
+    <!-- <img src="connor-headshot.jpg" alt="Connor MacIvor"> -->
+  </div>
+
+  <!-- NAME / TITLE -->
+  <h1 class="name">Connor Mac<span style="font-family:Georgia,'Times New Roman',serif">I</span>vor</h1>
+  <p class="title">AI Growth Architect</p>
+  <p class="tagline">Former LAPD &bull; 27+ Years SCV Real Estate &bull; AI Builder</p>
+
+  <!-- PHONE -->
+  <a href="tel:+16614001720" class="phone-link">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1v3.59a1 1 0 01-1 1A17 17 0 013 3a1 1 0 011-1h3.59a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+    661-400-1720
+  </a>
+
+  <!-- CTA BUTTONS -->
+  <div class="cta-stack">
+
+    <!-- AI VOICE AGENT -->
+    <a href="https://hireaivoice.com" target="_blank" rel="noopener" class="cta-btn cta-voice" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3zm-1 18.93A8 8 0 015 12h2a6 6 0 0010 0h2a8 8 0 01-6 7.93V22h3v2H8v-2h3v-2.07z"/></svg>
+      </div>
+      <div class="cta-label">
+        Get an AI Voice Agent
+        <small>Your phone answered 24/7</small>
+      </div>
+    </a>
+
+    <!-- BUSINESS AUTOMATION -->
+    <a href="https://0.honorelevate.com" target="_blank" rel="noopener" class="cta-btn cta-auto" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M19.14 12.94a7 7 0 00.26-1.94 7 7 0 00-.26-1.94l2.13-1.66a.51.51 0 00.12-.64l-2-3.46a.5.5 0 00-.61-.22l-2.49 1a7.3 7.3 0 00-3.36-1.94l-.38-2.65A.49.49 0 0012 0h-4a.49.49 0 00-.49.42L7.13 3.07a7.3 7.3 0 00-3.36 1.94l-2.49-1a.5.5 0 00-.61.22l-2 3.46a.5.5 0 00.12.64l2.13 1.66a7 7 0 000 3.88L.79 15.53a.51.51 0 00-.12.64l2 3.46a.5.5 0 00.61.22l2.49-1a7.3 7.3 0 003.36 1.94l.38 2.65A.49.49 0 0010 24h4a.49.49 0 00.49-.42l.38-2.65a7.3 7.3 0 003.36-1.94l2.49 1a.5.5 0 00.61-.22l2-3.46a.51.51 0 00-.12-.64zM12 15.6A3.6 3.6 0 1115.6 12 3.6 3.6 0 0112 15.6z"/></svg>
+      </div>
+      <div class="cta-label">
+        Automate Your Business
+        <small>See live AI systems I've built</small>
+      </div>
+    </a>
+
+    <!-- SELLING HOME -->
+    <a href="https://sellersonlyagent.com" target="_blank" rel="noopener" class="cta-btn cta-sell" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      </div>
+      <div class="cta-label">
+        Selling a Home in SCV?
+        <small>Sellers only &bull; No dual agency</small>
+      </div>
+    </a>
+
+    <!-- AI PROPERTY SITE -->
+    <a href="https://aipropertysite.com" target="_blank" rel="noopener" class="cta-btn cta-prop" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 8V7l-3 2-3-2v1l3 2 3-2zm1-5H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 16H2V5h12v14zm8 0h-6V5h6v14z"/></svg>
+      </div>
+      <div class="cta-label">
+        AI Property Websites
+        <small>Done-for-you listing sites &bull; $497</small>
+      </div>
+    </a>
+
+    <!-- DAILY DOWNLOAD -->
+    <a href="https://www.youtube.com/@AIwithHonor/videos" target="_blank" rel="noopener" class="cta-btn cta-show" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1A78 78 0 0012 4.27a78 78 0 00-8.37.32 2.92 2.92 0 00-1.72 1A8.5 8.5 0 001 9.71a48.7 48.7 0 000 4.58 8.5 8.5 0 00.91 4.13 2.92 2.92 0 001.72 1A78 78 0 0012 19.73a78 78 0 008.37-.32 2.92 2.92 0 001.72-1A8.5 8.5 0 0023 14.29a48.7 48.7 0 000-4.58zM9.74 14.85V8.55l5.6 3.15-5.6 3.15z"/></svg>
+      </div>
+      <div class="cta-label">
+        AI With Honor — Daily Download
+        <small>Daily AI news that actually matters</small>
+      </div>
+    </a>
+
+    <!-- CONNORS CUT / LAST ADDICTION -->
+    <a href="https://thelastaddiction.com" target="_blank" rel="noopener" class="cta-btn cta-cut" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+      </div>
+      <div class="cta-label">
+        The Last Addiction
+        <small>My 63-day transformation journey</small>
+      </div>
+    </a>
+
+    <!-- JOIN SYNC -->
+    <a href="https://joinsyncnow.com" target="_blank" rel="noopener" class="cta-btn cta-sync" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <div class="cta-label">
+        Join SYNC Brokerage
+        <small>Agents &bull; Earn 8% on every closing</small>
+      </div>
+    </a>
+
+    <!-- CONNOR WITH HONOR FULL SITE -->
+    <a href="https://connorwithhonor.com" target="_blank" rel="noopener" class="cta-btn cta-full" onclick="ripple(event)">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      </div>
+      <div class="cta-label">
+        The Full Story
+        <small>ConnorWithHonor.com</small>
+      </div>
+    </a>
+
+    <!-- SEVENTEENK TEASER -->
+    <a href="https://seventeenk.com" target="_blank" rel="noopener" class="cta-btn cta-17k" onclick="ripple(event)">
+      <span class="pulse-dot"></span>
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <div class="cta-label">
+        <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:3px">#SeventeenK</span>
+        <small>May 17 &bull; Something is changing</small>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CREDENTIALS -->
+  <div class="cred-bar">
+    <span class="cred"><span class="cred-dot"></span>LAPD Veteran</span>
+    <span class="cred"><span class="cred-dot"></span>CA DRE #01238257</span>
+    <span class="cred"><span class="cred-dot"></span>1,000+ Trained</span>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="https://honorelevate.com" target="_blank" rel="noopener">Coded by Connor with Honor | AI Growth Architect</a>
+    <p class="copy">&copy; 2026 DarkOps AI &bull; SYNC Brokerage &bull; Santa Clarita, CA</p>
+  </div>
+
+</div>
+
+<script>
+// 17 DOTS EASTER EGG
+(function(){
+  const c=document.getElementById('dots17');
+  for(let i=0;i<17;i++){
+    const s=document.createElement('span');
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*4)+'s';
+    c.appendChild(s);
+  }
+})();
+
+// RIPPLE EFFECT
+function ripple(e){
+  const btn=e.currentTarget;
+  const r=document.createElement('span');
+  r.className='ripple';
+  const rect=btn.getBoundingClientRect();
+  const size=Math.max(rect.width,rect.height);
+  r.style.width=r.style.height=size+'px';
+  r.style.left=(e.clientX-rect.left-size/2)+'px';
+  r.style.top=(e.clientY-rect.top-size/2)+'px';
+  btn.appendChild(r);
+  setTimeout(()=>r.remove(),600);
+}
+
+// STAGGER ANIMATION ON LOAD
+document.addEventListener('DOMContentLoaded',()=>{
+  const btns=document.querySelectorAll('.cta-btn');
+  btns.forEach((b,i)=>{
+    b.style.animationDelay=(1.2+i*.12)+'s';
+  });
+});
+</script>
+
+<!-- RAVEN AI VOICE WIDGET -->
+<script 
+  src="https://widgets.leadconnectorhq.com/loader.js"  
+  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+  data-widget-id="69bccacb7111ac4afc78d04c">
+</script>
+
+</body>
+</html>

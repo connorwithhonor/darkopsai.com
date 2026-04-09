@@ -1,2 +1,0 @@
-# darkopsai.com
-DarkOpsAI.com
